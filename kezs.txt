@@ -1,0 +1,10 @@
+IoTWorkshopApp AgkLpQ0vwjd6k8okj8tIvxEBZMQWiVnyoMGdBe3+i2k=
+IoTWorkshopRPi cOn0AaSWxLBKP5xUCfzIfbH//ylTXyJJgwYrl89iWV0=
+
+IP Adress 192.168.0.131
+Connection string> HostName=Tim5.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=+EfTIwEUHbEKgNF7hNnC/WvOBT3soYQaN8Ku7AafB7U=
+
+Bot
+App ID e36d7d55-7049-4c63-8a95-ca05f30e1770
+App Name TeamBot5
+Password KBVXSfzC3zGTOpykAjdkPjk

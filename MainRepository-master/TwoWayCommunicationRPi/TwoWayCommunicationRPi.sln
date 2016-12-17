@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Two Way Communication RPi", "Two Way Communication RPi\Two Way Communication RPi.csproj", "{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|ARM = Release|ARM
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|ARM.ActiveCfg = Debug|ARM
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|ARM.Build.0 = Debug|ARM
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|ARM.Deploy.0 = Debug|ARM
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|x64.ActiveCfg = Debug|x64
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|x64.Build.0 = Debug|x64
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|x64.Deploy.0 = Debug|x64
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|x86.ActiveCfg = Debug|x86
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|x86.Build.0 = Debug|x86
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Debug|x86.Deploy.0 = Debug|x86
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|ARM.ActiveCfg = Release|ARM
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|ARM.Build.0 = Release|ARM
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|ARM.Deploy.0 = Release|ARM
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|x64.ActiveCfg = Release|x64
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|x64.Build.0 = Release|x64
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|x64.Deploy.0 = Release|x64
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|x86.ActiveCfg = Release|x86
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|x86.Build.0 = Release|x86
+		{BF5C4EDF-8FB2-4236-A7A2-7C36DDD8A75A}.Release|x86.Deploy.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://apilab.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Two\u0020Way\u0020Communication\u0020RPi\\Two\u0020Way\u0020Communication\u0020RPi.csproj
+		SccProjectName1 = Two\u0020Way\u0020Communication\u0020RPi
+		SccLocalPath1 = Two\u0020Way\u0020Communication\u0020RPi
+	EndGlobalSection
+EndGlobal
