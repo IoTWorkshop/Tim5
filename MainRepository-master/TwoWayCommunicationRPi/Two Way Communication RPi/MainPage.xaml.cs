@@ -40,14 +40,24 @@ namespace Two_Way_Communication_RPi
         static ServiceClient serviceClient;
         static string connectionString = "HostName=Tim5.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=+EfTIwEUHbEKgNF7hNnC/WvOBT3soYQaN8Ku7AafB7U=";
         private static int i = 2;
+        public static string StringSaArduina = "";
+        public static double temperatura = 0;
+        public static double vlaznostZraka = 0;
+        public static double vlaznostTla = 0;
+        public static double gasSenzor = 0;
+        public static double[] naseVrijednosti = { 0, 0, 0, 0 };
+        private int counter = 0;
+
+
         public MainPage()
         {
             deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("IoTWorkshopRPi", deviceKey));
             serviceClient = ServiceClient.CreateFromConnectionString(connectionString);
             InitializeComponent();
+            
+            //InitGPIO();
+            //ReceiveC2dAsync();
             initcommunitcation();
-            InitGPIO();
-            ReceiveC2dAsync();
         }
 
         private async void initcommunitcation()
@@ -98,7 +108,7 @@ namespace Two_Way_Communication_RPi
         private void TimerCallback(object state)
         {
             byte[] RegAddrBuf = new byte[] { 0x40 };
-            byte[] ReadBuf = new byte[64];
+            byte[] ReadBuf = new byte[4];
             try {
                 Device.Read(ReadBuf); // read the data
             }
@@ -106,12 +116,26 @@ namespace Two_Way_Communication_RPi
             catch (Exception f) {
                 Debug.WriteLine(f.Message);
             }
+            try
+            {
+                char[] cArray = System.Text.Encoding.UTF8.GetString(ReadBuf, 0, 4).ToCharArray();  // Converte  Byte to Char
+                String c = new String(cArray);
 
-            char[] cArray = System.Text.Encoding.UTF8.GetString(ReadBuf, 0, 64).ToCharArray();  // Converte  Byte to Char
-            String c = new String(cArray);
-            textBlock.Text = c;
+                naseVrijednosti[counter] = Convert.ToDouble(c);
+                counter++;
+                if (counter == 4)
+                    counter = 0;
+            }
+            catch
+            {
+            }
+                
+            //Debug.WriteLine(c);
+
+            //var task = this.Dispatcher.RunAsync(Windows.UI.Core.CoreDispatcherPriority.Normal, () =>
+            
         }
-
+        /*
         private void InitGPIO()
         {
             var gpio = GpioController.GetDefault();
@@ -127,8 +151,9 @@ namespace Two_Way_Communication_RPi
             pin.Write(pinValue);
             pin.SetDriveMode(GpioPinDriveMode.Output);
 
-        }
-        private async void ReceiveC2dAsync()
+        }*/
+        //emina komentar
+       /* private async void ReceiveC2dAsync()
         {
             while (true)
             {
@@ -153,11 +178,16 @@ namespace Two_Way_Communication_RPi
             }
 
         }
-
+        */
+        //dovdje
         private async void button_Click(object sender, RoutedEventArgs e)
         {
             if (i % 2 == 0)
-                await SendCloudToDeviceMessageAsync("1");
+            {
+                //emina komentar
+                //await SendCloudToDeviceMessageAsync("1");
+                await SendCloudToDeviceMessageAsync(StringSaArduina);
+            }
             else
                 await SendCloudToDeviceMessageAsync("0");
             i++;
@@ -167,6 +197,23 @@ namespace Two_Way_Communication_RPi
         {
             var commandMessage = new Microsoft.Azure.Devices.Message(Encoding.ASCII.GetBytes(podaci));
             await serviceClient.SendAsync("IoTWorkshopApp", commandMessage);
+        }
+
+        private void textBlock_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock.Text = naseVrijednosti[0].ToString();
+            textBlock_Copy.Text = naseVrijednosti[1].ToString();
+            textBlock_Copy1.Text = naseVrijednosti[2].ToString();
+            textBlock_Copy2.Text = naseVrijednosti[3].ToString();
+            StringSaArduina = "Koncentracija gasa: " + textBlock.Text +
+                "\nVlaznost tla: " + textBlock_Copy.Text +
+                "\nVlaznost zraka: " + textBlock_Copy1.Text +
+                "\nTemperatura: " + textBlock_Copy2.Text;
         }
     }
 }

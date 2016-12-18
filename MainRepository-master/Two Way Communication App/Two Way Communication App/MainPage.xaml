@@ -5,12 +5,19 @@
     xmlns:local="using:Two_Way_Communication_App"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Height="649">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="10,10,0,0">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="100" Height="100" Margin="10"/>
-        </StackPanel>
-        <Button x:Name="button" Content="Click" HorizontalAlignment="Left" Margin="143,218,0,0" VerticalAlignment="Top" Click="button_Click"/>
+    <Grid Background="#FFBBFF97" Margin="10,10,0,10">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="button" Content="Prikaži" HorizontalAlignment="Left" Margin="29,465,0,0" VerticalAlignment="Top" Click="button_Click" Background="#7F02710B" Width="289" BorderBrush="#FF005FFF"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="65,76,0,0" TextWrapping="Wrap" Text="Greenhouse information: 
+                   " VerticalAlignment="Top" RenderTransformOrigin="-0.403,-2.767" FontSize="20"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="10,282,0,0" TextWrapping="Wrap" Text="-" VerticalAlignment="Top" Height="112" Width="330" FontSize="20"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="61" Margin="28,399,0,0" VerticalAlignment="Top" Width="71" Source="Assets/slicica1.png"/>
+        <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="61" Margin="104,399,0,0" VerticalAlignment="Top" Width="70" Source="Assets/slicica2.png"/>
+        <Image x:Name="image_Copy1" HorizontalAlignment="Left" Height="61" Margin="179,399,0,0" VerticalAlignment="Top" Width="68" Source="Assets/slicica3.png"/>
+        <Image x:Name="image_Copy2" HorizontalAlignment="Left" Height="61" Margin="252,399,0,0" VerticalAlignment="Top" Width="75" Source="Assets/slicica4.png"/>
+        <Image x:Name="image1" HorizontalAlignment="Left" Height="89" Margin="247,376,0,0" VerticalAlignment="Top" Width="93"/>
+        <Image x:Name="image2" HorizontalAlignment="Left" Height="169" Margin="65,108,0,0" VerticalAlignment="Top" Width="219" Source="Assets/greenhouse.png"/>
     </Grid>
 </Page>

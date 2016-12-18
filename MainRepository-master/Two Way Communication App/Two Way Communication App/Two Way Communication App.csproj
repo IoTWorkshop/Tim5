@@ -110,7 +110,12 @@
     <None Include="Two Way Communication App_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\greenhouse.png" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
+    <Content Include="Assets\slicica1.png" />
+    <Content Include="Assets\slicica2.png" />
+    <Content Include="Assets\slicica3.png" />
+    <Content Include="Assets\slicica4.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
     <Content Include="Assets\Square150x150Logo.scale-200.png" />
     <Content Include="Assets\Square44x44Logo.scale-200.png" />

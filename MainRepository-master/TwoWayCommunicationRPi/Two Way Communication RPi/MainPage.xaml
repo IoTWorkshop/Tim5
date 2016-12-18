@@ -8,10 +8,18 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Ellipse x:Name="LED" Fill="LightGray" Stroke="White" Width="100" Height="100" Margin="10"/>
-        </StackPanel>
-        <Button x:Name="button" Content="Click" HorizontalAlignment="Left" Margin="147,188,0,0" VerticalAlignment="Top" Click="button_Click"/>
-        <TextBlock x:Name="textBlock" Height="69" Margin="65,59,74,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="button" Content="Moze li cloud?
+                " HorizontalAlignment="Left" Margin="114,548,0,0" VerticalAlignment="Top" Click="button_Click" Width="140"/>
+        <TextBlock x:Name="textBlock" Height="69" Margin="65,75,58,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" SelectionChanged="textBlock_SelectionChanged"/>
+        <Button x:Name="button1" Content="Prikazi informacije" HorizontalAlignment="Left" Margin="114,511,0,0" VerticalAlignment="Top" Click="button1_Click"/>
+        <TextBlock x:Name="textBlock_Copy" Height="69" Margin="65,184,58,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" SelectionChanged="textBlock_SelectionChanged"/>
+        <TextBlock x:Name="textBlock_Copy1" Height="69" Margin="68,308,58,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" SelectionChanged="textBlock_SelectionChanged"/>
+        <TextBlock x:Name="textBlock_Copy2" Height="69" Margin="68,416,58,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" SelectionChanged="textBlock_SelectionChanged"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Margin="65,43,0,0" TextWrapping="Wrap" Text="Gas: " VerticalAlignment="Top" FontSize="20" Width="237"/>
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Margin="65,149,0,0" TextWrapping="Wrap" Text="Vlažnost tla:" VerticalAlignment="Top" Height="35" Width="237" FontSize="20"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Margin="65,276,0,0" TextWrapping="Wrap" Text="Vlažnost zraka: " VerticalAlignment="Top" FontSize="20" Width="237"/>
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Left" Margin="65,384,0,0" TextWrapping="Wrap" Text="Temperatura:" VerticalAlignment="Top" FontSize="20" Width="237"/>
+        <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Margin="154,585,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
     </Grid>
 </Page>
